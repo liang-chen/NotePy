@@ -1,0 +1,82 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontPrep 20130207 at Mon May 18 15:17:34 2015
+ By Daniel Spreadbury
+Copyright (c) 2015, Steinberg Media Technologies GmbH (http://www.steinberg.net/), with Reserved Font Name "Bravura".
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded, redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting, or substituting -- in part or in whole -- any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.
+
+"Author" refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.
+
+PERMISSION &#38; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.
+
+5) The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+</metadata>
+<defs>
+<font id="7377dd80c36b825ad2214a14c2421925" horiz-adv-x='1024' >
+  <font-face 
+    font-family="Bravura"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="2048"
+    panose-1="5 6 0 0 0 0 0 0 0 0"
+    ascent="1638"
+    descent="-410"
+    bbox="-889 -4080 4749 4096"
+    underline-thickness="102"
+    underline-position="-102"
+    unicode-range="U+0020-1D1DD"
+  />
+<missing-glyph horiz-adv-x="608" 
+ />
+    <glyph glyph-name="uniE527" unicode="&#xe520;&#xe520;&#xe520;&#xe520;&#xe520;&#xe520;" horiz-adv-x="4349" 
+d="M4114 485q-36 -1 -72 -37t-59 -92l-41 -100q-39 -98 -39 -141q0 -66 52 -66q67 0 137 137t70 218t-48 81zM3387 485q-35 -1 -71 -37t-60 -92l-41 -100q-39 -98 -39 -141q0 -66 52 -66q68 0 138 137t68 218q0 81 -47 81zM2660 485q-36 -1 -72 -37t-59 -92l-41 -100
+q-39 -98 -39 -141q0 -66 52 -66q67 0 137 137t70 218t-48 81zM1933 485q-35 -1 -71 -37t-60 -92l-41 -100q-39 -98 -39 -141q0 -66 52 -66q68 0 138 137t68 218q0 81 -47 81zM1206 485q-36 -1 -72 -37t-59 -92l-41 -100q-39 -98 -39 -141q0 -66 52 -66q67 0 137 137t70 218
+t-48 81zM479 485q-35 -1 -71 -37t-60 -92l-41 -100q-39 -98 -39 -141q0 -66 51 -66q68 0 138 137q69 137 69 218t-47 81zM4358 379q0 -150 -106 -275t-250 -124q-88 0 -130 50q-5 5 -11 5t-17 -25l-92 -229q-4 -12 -4 -16t18 -5h82q25 0 25 -26t-27 -25h-395q-25 0 -25 26
+t27 25h63q23 0 31 21l252 625q12 28 12 52t-30 23t-78 -73q-18 -25 -33 -25q-23 0 -23 20q0 14 17 39q82 117 186 117t120 -71q5 -21 11 -21t22 19q61 75 158 75t147 -47t50 -135zM3631 379q0 -150 -106 -275t-250 -124q-88 0 -130 50q-5 5 -11 5t-17 -25l-92 -229
+q-4 -12 -4 -16t18 -5h82q25 0 25 -26t-27 -25h-395q-25 0 -25 26t27 25h63q23 0 31 21l252 625q12 28 12 52t-30 23t-78 -73q-18 -25 -33 -25q-23 0 -23 20q0 14 17 39q82 117 186 117t120 -71q7 -29 19 -17q4 4 14 15q61 75 158 75t147 -47t50 -135zM2904 379
+q0 -150 -106 -275t-250 -124q-88 0 -130 50q-6 5 -12 5t-16 -25l-92 -229q-4 -12 -4 -16t18 -5h82q25 0 25 -26t-27 -25h-395q-25 0 -25 26t27 25h63q23 0 31 21l252 625q12 28 12 52t-30 23t-78 -73q-18 -25 -33 -25q-23 0 -23 20q0 14 17 39q82 117 186 117t120 -71
+q7 -29 19 -17q4 4 14 15q61 75 158 75t147 -47t50 -135zM2177 379q0 -150 -106 -275t-250 -124q-88 0 -130 50q-5 5 -11 5t-17 -25l-92 -229q-4 -12 -4 -16t18 -5h82q25 0 25 -26t-27 -25h-395q-25 0 -25 26t27 25h63q23 0 31 21l252 625q12 28 12 52t-30 23t-78 -73
+q-18 -25 -33 -25q-23 0 -23 20q0 14 17 39q82 117 186 117t120 -71q7 -29 19 -17q4 4 14 15q61 75 158 75t147 -47t50 -135zM1450 379q0 -150 -106 -275t-250 -124q-88 0 -130 50q-6 5 -12 5t-16 -25l-92 -229q-4 -12 -4 -16t18 -5h82q25 0 25 -26t-27 -25h-395
+q-25 0 -25 26t27 25h63q23 0 31 21l252 625q12 28 12 52t-30 23t-78 -73q-18 -25 -33 -25q-23 0 -23 20q0 14 17 39q82 117 186 117t120 -71q7 -29 19 -17q4 4 14 15q61 75 158 75t147 -47t50 -135zM526 561q97 0 147 -47t50 -135q-1 -150 -107 -275t-249 -124
+q-88 0 -130 50q-5 5 -11 5t-17 -25l-92 -229q-4 -12 -4 -16t18 -5h82q25 0 25 -26t-27 -25h-395q-25 0 -25 26t27 25h63q23 0 31 21l252 625q12 28 12 52t-22 23q-47 0 -138 -155q-16 -31 -32 -31q-23 0 -23 22q1 11 35 75q90 166 229 167q95 0 110 -71q7 -29 19 -17
+q4 4 14 15q61 75 158 75z" />
+    </font>
+</defs></svg>
+
