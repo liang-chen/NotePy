@@ -4,8 +4,8 @@ from setuptools import find_packages, setup
 
 setup(name = 'NotePy',
     version = '0.0.1',
-    description = "A framework to render music notation",
-    long_description = "A framework to render music notation",
+    description = "A framework for automatic music notation",
+    long_description = "A framework for automatic music notation",
     platforms = ["OS X"],
     author="Liang Chen",
     author_email="chen348@indiana.com",
