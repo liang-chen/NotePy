@@ -58,7 +58,7 @@ def parse_content(txt):
                         for att in content:
                             parent.add_attribute(node.value, att)
         else:
-            continue;
+            continue
 
     if len(stack) > 0:
         print "Error in pairing parantheses, left/right parantheses unbalanced."

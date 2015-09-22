@@ -27,6 +27,11 @@ def draw_stem(draw,stem,parms):
     i2 = parms[stem.locs[1][0][0]].value + stem.locs[1][0][1]
     draw.line((j,i1, j,i2), width = glob.stem_width, fill=(0,0,0,0))
 
+def draw_ledger_line(draw,ledger_line,parms):
+    i = parms[ledger_line.locs[0][0][0]].value + ledger_line.locs[0][0][1]
+    j = parms[ledger_line.locs[0][1][0]].value + ledger_line.locs[0][1][1]
+    draw.line((j-glob.ledger_radius, i, j+glob.ledger_radius, i), width = glob.ledger_width, fill = (0,0,0,0))
+    
 def draw_beam(draw,beam,parms):
     i1 = parms[beam.locs[0][0][0]].value + beam.locs[0][0][1]
     j1 = parms[beam.locs[0][1][0]].value + beam.locs[0][1][1] - glob.stem_width/3
@@ -38,12 +43,15 @@ def draw_beam(draw,beam,parms):
    # draw.line((j1,i1, j2,i2), width = glob.beam_width, fill=(0,0,0,0))
     
 def draw_prim(draw, font, prim, parms):
+    print "drawing..."
     if prim.name in glob.solid_symbol:
         draw_solid_prim(draw, font, prim, parms)
     elif prim.name == "bar":
         draw_bar(draw,prim, parms)
     elif prim.name == "stem":
         draw_stem(draw,prim,parms)
+    elif prim.name == "ledger_line":
+        draw_ledger_line(draw,prim,parms)
     elif prim.name == "beam" or prim.name == "part_beam":
         draw_beam(draw,prim,parms)
     #else:

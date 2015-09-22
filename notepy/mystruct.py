@@ -15,6 +15,18 @@ class Node:
             self.attribute.update({key:[]})
         if key == 'o': #onset is used to order symbols, in integer type
             att = int(attribute)
+        elif key == 't':
+            inp = attribute.strip()
+            ilist = inp.split('/')
+            if len(ilist) == 2:
+                att = int(ilist[0])
+                self.attribute[key].append(att)
+                att = int(ilist[1])
+                self.attribute[key].append(att)
+                return
+            else:
+                error('Cannot handle this type of time signature.')
+                att = 0
         elif key == 'd':
             inp = attribute.strip()
             ilist = inp.split('/')

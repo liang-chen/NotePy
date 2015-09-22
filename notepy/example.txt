@@ -2,7 +2,7 @@
 
 { staff
 {measure
-{ clef {c treble}}
+{ clef {c treble}{t 3/4}}
 {chord {p C3,B4,B5,F5}{o 0}{d 3/4}{dir up}}
 {chord {p F4,B4,B5,F5}{o 1}{d 1/1}{dir up}}
 {chord {p F4,B4,B5}{o 3}{d 1}{dir up}}
