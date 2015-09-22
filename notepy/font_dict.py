@@ -18,9 +18,22 @@ font_dict = {
     "double_sharp":u"\uE263",
     "double_flat":u"\uE264",
     "double_natural":u"\uE261",#do we have double natural?
+    "time_0":u"\uE080",
+    "time_1":u"\uE081",
+    "time_2":u"\uE082",
+    "time_3":u"\uE083",
+    "time_4":u"\uE084",
+    "time_5":u"\uE085",
+    "time_6":u"\uE086",
+    "time_7":u"\uE087",
+    "time_8":u"\uE088",
+    "time_9":u"\uE089",
+    "time_common":u"\uE08A",
+    "time_cut":u"\uE08B",
     "bar":-1,
     "double_bar":-1,
     "stem":-1,
     "beam":-1,
     "part_beam":-1,
+    "ledger_line":-1
 }

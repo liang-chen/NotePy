@@ -54,6 +54,12 @@ def add_solid_prim(graph,prim,s,curj,h,pt = ["c","h"]):
     graph.add_prim(prim)
     return j+glob.inter_sym_dis
 
+def add_ledger_prim(graph,prim,s,curj):
+    ##loc has been set when connecting to its master notehead
+    prim.set_sym_index(s)
+    graph.add_prim(prim)
+    return curj
+
 def add_stem_prim(graph,stem,s,curj,up):
     if up:
         i1 = glob.center_height#top
@@ -91,7 +97,7 @@ def add_beam_prim(graph,beam,s,curj):
     beam.set_sym_index(s)
     graph.add_prim(beam)
     return j2
-    
+
 def add_graph_prim_parm(graph,prim,s,curj,h = glob.center_height, up = 0):
     if prim.name == "bar":
         newj = add_bar(graph,prim,s,curj)
@@ -101,6 +107,8 @@ def add_graph_prim_parm(graph,prim,s,curj,h = glob.center_height, up = 0):
         newj = add_stem_prim(graph,prim,s,curj,up)
     elif prim.name == "beam" or prim.name == 'part_beam':
         newj = add_beam_prim(graph,prim,s,curj)
+    elif prim.name == "ledger_line":
+        newj = add_ledger_prim(graph,prim,s,curj)
     else:
         newj = curj + glob.inter_sym_dis
         #simply do nothing here
@@ -154,6 +162,19 @@ def add_clef_key(graph, clef_key,s,j,clef,keys):
     else:
         newj = curj + glob.inter_sym_dis
         #simply do nothing here
+    
+    #time signature
+    if 't' in clef_key.attribute.keys():
+        num = clef_key.attribute['t'][0]
+        time_top_prim = Primitive("time_"+str(num),1,0)
+        newj = add_graph_prim_parm(graph,time_top_prim,s,j,h = glob.staff_top + glob.staff_gap)
+        num = clef_key.attribute['t'][1]
+        time_bot_prim = Primitive("time_"+str(num),1,0)
+        newj = add_graph_prim_parm(graph,time_bot_prim,s,j, h = glob.staff_bot - glob.staff_gap)
+        
+        graph.add_edge(time_top_prim, time_bot_prim, 0 , 0, "h", 0)
+        graph.add_edge(prim, time_top_prim, 0 , 0, "h", glob.inner_sym_dis)
+
     return newj
 
 def get_acc(p,acc,clef,keys):
@@ -191,15 +212,21 @@ def find_pitch_height(pitch, clef, keys):#needs to parse the string into midi nu
     optp = indices[opti]
     
     acc = get_acc(pitch[0],pitch[1],clef,keys) #type,num of accidentals
+
+    ledger = 0
     
     ##only works for treble clef for now
     if clef == 'treble':
         pos_diff = (p - 60)/12#C4 for reference
         height = glob.center_height + 3*glob.staff_gap - pos_diff*(3.5*glob.staff_gap) - float(opti)*(0.5*glob.staff_gap)
-        return [height,acc]
+
+        if height > glob.center_height + 2*glob.staff_gap or height < glob.center_height - 2*glob.staff_gap:
+            ledger = 1
+        
+        return [height,acc,ledger]
     else:
         #simply do nothing
-        return [glob.center_height,acc]
+        return [glob.center_height,acc,ledger]
 
 def get_acc_name(acc,num):
     if num > 2 or num < 0:
@@ -222,13 +249,21 @@ def add_acc(graph,note_head,acc,s,j,onset):
             add_graph_prim_parm(graph,prim,s,j)
             connect_prim_knots(note_head,prim,0,0,'v',0)
             connect_prim_knots(note_head,prim,0,0,'h',-glob.note_head_to_sat)
-    
+
+def add_ledger_line(graph,note_head,s,j,onset):
+    prim = Primitive("ledger_line", 1,onset)
+    add_graph_prim_parm(graph,prim,s,j)
+    connect_prim_knots(note_head,prim,0,0,'v',0)
+    connect_prim_knots(note_head,prim,0,0,'h',0)
+            
 def add_note_head(graph,name,onset,pitch,s,j,clef,keys):
     """ generic function to add all sorts fo note heads and its satellites"""
-    [height,acc] = find_pitch_height(pitch,clef,keys)
+    [height,acc,ledger] = find_pitch_height(pitch,clef,keys)
     prim = Primitive(name,1,onset)#prim is the primitive of notehead
     newj = add_graph_prim_parm(graph,prim,s,j,h = height)
     add_acc(graph,prim,acc,s,j,onset)
+    if ledger:
+        add_ledger_line(graph,prim,s,j,onset)
     return [height,prim,newj]
 
 def add_whole_note(graph,whole,s,j,clef,keys):
@@ -637,6 +672,9 @@ def add_horizontal_edge(graph,vert_added):
     pl.sort(key=lambda x: x.onset)
     for pair in pairs(pl):#first on the left and second on the right
         #if pair[0].locs[pair[0].num-1][1][0] != pair[1].locs[0][1][0]:
+        
+        #print "hello",pair[0].name, pair[1].name
+        
         if pair[0].symbol != pair[1].symbol and (pair[0].symbol, pair[1].symbol) not in vert_added:
             if pair[0].onset == pair[1].onset and any(va in pair[0].name for va in glob.vertically_alignable)\
                 and any(va in pair[1].name for va in glob.vertically_alignable):
@@ -684,6 +722,7 @@ def tree_to_prim_graph(tree):
     curbar = Primitive("bar",2,0)
     curj = add_graph_prim_parm(graph,curbar,sym_index,curj)#0 for current symbol index of the bar?
     fix_prim_parm(graph.parms,curbar,0,1)
+
     #for clef and keys
     clef = 'treble'#default one
     keys = 0#default one
