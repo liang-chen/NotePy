@@ -1,0 +1,31 @@
+{ system
+
+{ staff
+{measure
+{ clef {c treble}{t 3/4}}
+{chord {p C3,B4,B5,F5}{o 0}{d 3/4}{dir up}}
+{chord {p F4,B4,B5,F5}{o 1}{d 1/1}{dir up}}
+{chord {p F4,B4,B5}{o 3}{d 1}{dir up}}
+{chord {p B5,F5}{o 4}{d 3/32}{dir up}}
+{chord {p F4,B4}{o 4}{d 3/64}{dir down}}
+{chord {p F4,B4,B5,D6,C4}{o 6}{d 1/2}{dir up}}
+{chord {p F4,B4,B5,D6,C4}{o 7}{d 3/4}{dir up}}
+{chord {p F4,B4,B5,D6,C4}{o 8}{d 3/16}{dir up}}
+{chord {p F4#,B4#,B5b}{o 9}{d 1/8}{dir up}}
+{chord {p F4,B4,B5}{o 17}{d 3/8}{dir up}}
+{chord {p F4,B4,B5}{o 10}{d 3/8}{dir up}}
+{beam {chord {p B5#}{o 12}{d 1/8}{dir up}}
+	{chord {p B5bb}{o 13}{d 1/16}{dir up}}
+	{chord {p B5}{o 14}{d 1/32}{dir up}}
+	{chord {p B5}{o 16}{d 3/64}{dir up}}
+}
+{beam {chord {p F4##,B4n}{o 11}{d 1/8}{dir down}}
+	{chord {p F4,B4}{o 12}{d 1/16}{dir down}}
+	{chord {p F4,B4}{o 13}{d 1/32}{dir down}}
+	{chord {p F4,B4}{o 14}{d 3/64}{dir down}}
+}
+
+}
+}
+
+}
